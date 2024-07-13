@@ -163,7 +163,7 @@ router.post('/register', async (req, res) => {
         <p>Dear User,</p>
         <p>Thank you for registering with <strong>Learn Stocks</strong>, your comprehensive platform for mastering the stock market. We provide real-time data, expert insights, and a supportive community to help you navigate the complexities of stock trading.</p>
         <p>Please verify your email address to complete your registration. Click the button below to verify your email:</p>
-        <a href="http://localhost:5000/api/verify-email?token=${verificationToken}" class="button">Verify Email</a>
+        <a href="https://learn-stocks.onrender.com/api/verify-email?token=${verificationToken}" class="button">Verify Email</a>
         <p>If you did not create an account, please disregard this email.</p>
         <p>Best regards,<br>The Learn Stocks Team</p>
     </div>
