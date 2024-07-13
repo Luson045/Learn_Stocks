@@ -26,7 +26,7 @@ app.use(express.static('public'))
 const PORT = process.env.PORT || 5000;
 //const AV_URL ='';
 const corsOptions = {
-  origin: 'https://learn-stocks.netlify.app/', // Update with your frontend's URL
+  origin: '*', // Update with your frontend's URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed HTTP methods
   allowedHeaders: ['Content-Type', 'Authorization', 'x-auth-token'], // Include 'x-auth-token' in allowed headers
   credentials: true, // Allow credentials such as cookies
