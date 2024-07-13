@@ -21,6 +21,7 @@
     "mongoose": "^8.4.4",
     "node-cron": "^3.0.3",
     "node-fetch": "^3.3.2",
+    "nodemailer": "^6.9.14",
     "request": "^2.88.2",
     "stock-nse-india": "^1.1.5"
   }
