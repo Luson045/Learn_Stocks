@@ -7,7 +7,8 @@ const All = require('../models/all');
 const Rate = require('../models/Ratings');
 const nodemailer = require('nodemailer');
 const crypto = require('crypto');
-require('dotenv').config();
+const path = require('path');
+require('dotenv').config({ path: "../.env" });
 // JWT Secret
 const jwtSecret = process.env.JWT_KEY; // Replace with a strong secret
 const auth = (req, res, next) => {
