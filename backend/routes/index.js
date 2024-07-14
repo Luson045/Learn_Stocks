@@ -208,7 +208,7 @@ router.get('/verify-email', async (req, res) => {
         const payload = { user: { id: user.id } };
         jwt.sign(payload, jwtSecret, { expiresIn: 3600 * 3 }, (err, token) => {
             if (err) throw err;
-            res.redirect(`http://localhost:3000/profile?token=${token}`);
+            res.redirect(`https://learnstocks.netlify.app/profile?token=${token}`);
         });
     } catch (error) {
         console.error(error.message);
