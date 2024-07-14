@@ -4,7 +4,8 @@ const router = express.Router();
 const Org = require('../models/org');
 const All = require('../models/all');
 const finnhub = require('finnhub');
-require('dotenv').config();
+const path = require('path');
+require('dotenv').config({ path: "../.env" });
 const all_org_id=process.env.ALL;
 //const FINNHUB_API_KEY = process.env.FINNHUB_API_KEY;
 
