@@ -39,7 +39,7 @@ router.post('/sell/:id', async (req, res) =>{
           user.demat_amnt = user.demat_amnt + ((price-user.bought_stocks[stockIndex].price)*quantity)+user.bought_stocks[stockIndex].price*quantity; 
           user.net_pl = user.net_pl+(price*quantity)-(user.bought_stocks[stockIndex].price*quantity);
           await user.save();
-          return res.status(200).json({ msg: `Sold Successfully, Profit: ${(price-user.bought_stocks[stockIndex].price)*quantity} Rs` });
+          return res.status(200).json({ msg: `Sold Successfully, Profit: ${(price*quantity)-(user.bought_stocks[stockIndex].price*quantity)} Rs` });
         }else{
           return res.status(300).json({ msg: "cannot sell stocks that you dont have" });
         }
