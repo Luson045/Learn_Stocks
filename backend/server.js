@@ -26,7 +26,7 @@ app.use(express.static('public'))
 const PORT = process.env.PORT || 5000;
 //const AV_URL ='';
 const corsOptions = {
-  origin: 'https://learnstocks.netlify.app', // Replace with your frontend's URL
+  origin: ['https://learnstocks.netlify.app','https://console.cron-job.org/'], // Replace with your frontend's URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization', 'x-auth-token'],
   credentials: true,
@@ -74,7 +74,6 @@ const stockSymbols = [
     "IRIS",
     "ITC",
     "ACC",
-    "MANYAVAR",
     "MARUTI",
     "MRF",
     "NDTV",
@@ -224,6 +223,9 @@ cron.schedule('0 0 * * *', async () => { // Runs every day at midnight
 app.use('/api/orgs', Orgroutes);
 app.use('/api/bs', BSroutes);
 app.use('/api', routes);
+app.get('/ping', async (req,res)=>{
+  res.send("Ping 200");
+})
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
