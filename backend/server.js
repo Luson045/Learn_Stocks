@@ -74,7 +74,7 @@ const stockSymbols = [
     "IRIS",
     "ITC",
     "ACC",
-    "M&M",
+    "MANYAVAR",
     "MARUTI",
     "MRF",
     "NDTV",
