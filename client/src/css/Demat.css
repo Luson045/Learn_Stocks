@@ -1,0 +1,84 @@
+.demat-page {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.demat-content {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.demat-content p {
+  color: #333;
+}
+
+.demat-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333333;
+}
+
+.demat-info p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #555555;
+}
+
+.demat-info form {
+  display: flex;
+  flex-direction: column;
+}
+
+.demat-info input[type="number"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.demat-info button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.demat-info button:hover {
+  background-color: #0056b3;
+}
+
+.message {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #28a745;
+}
+
+.loading {
+  font-size: 18px;
+  color: #777777;
+}
+
+.back-button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #6c757d;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #5a6268;
+}

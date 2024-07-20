@@ -1,0 +1,362 @@
+/* Basic styling */
+.homepage {
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  background-color: #333;
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Hero Section */
+.hero {
+  padding: 2rem;
+  background-color: #333;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #ff5722;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #ff5722;
+}
+
+/* Features Section */
+.features-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 800px;
+  position: relative;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #333;
+  border-radius: 10px;
+  margin: 0 1rem;
+}
+
+.carousel-slide.active {
+  display: flex;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.dot {
+  cursor: pointer;
+  margin: 0 0.3rem;
+  font-size: 1.2rem;
+  color: #ff5722;
+}
+
+.dot:hover {
+  color: #ff5722;
+}
+
+/* Fade-in and Fade-out effect */
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+/* Reviews Section */
+.reviews {
+  margin-top: 3rem;
+}
+
+.reviews h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.reviews-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.review-card {
+  background-color: #ff5722;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 200px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+  transform: scale(1.05);
+}
+
+.review-avatar {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.review-content {
+  text-align: center;
+}
+
+.review-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.review-content p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #dcdcdc;
+}
+
+.rating {
+  color: #ffd700; /* Gold color for ratings */
+}
+/* src/HomePage.css */
+.home-page-container {
+  text-align: center;
+  padding: 50px;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.home-page-container h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.home-page-container p {
+  color: #555;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+}
+
+.rate-us-button {
+  margin-top: 5%;
+  display: inline-block;
+  background-color: #ff7f00;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.rate-us-button:hover {
+  background-color: #e66a00;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+
+.popup h2 {
+  color: #ff7f00;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.star {
+  font-size: 2rem;
+  color: #ddd;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.star.selected {
+  color: #ff7f00;
+}
+
+textarea {
+  width: 90%;
+  height: 100px;
+  margin:  20px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+input {
+  width: 90%;
+  margin:  20px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  font-size: 1rem;
+}
+button[type="submit"] {
+  background-color: #ff7f00;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: #e66a00;
+}
+
+.close-popup {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #ff7f00;
+}
+
+.thank-you h3 {
+  color: #ff7f00;
+}
+
+.visitor-count {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.visitor-count span {
+  color: #ff7f00;
+  font-weight: bold;
+}
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000; /* Ensure it covers everything else */
+  display: flex;
+  justify-content: center;
+  align-items: center;/* Optional: darken the background */
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#bgVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1; /* Place the video behind other content */
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .background-video {
+      width: 100%;
+      height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .background-video {
+      width: 100%;
+      height: auto;
+  }
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .carousel-container {
+      width: 100%;
+  }
+
+  .review-card {
+      width: 90%;
+  }.popup-overlay {
+    padding-right: 5%;
+  }
+}

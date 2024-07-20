@@ -1,0 +1,142 @@
+/* Footer.css */
+
+.footer-dark {
+  margin-top: 100px;
+  padding: 50px 0;
+  background-color: #282d32; /* Use your website's primary or complementary color */
+  color: #ffffff; /* Text color to ensure readability against the dark background */
+}
+
+.footer-dark h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 18px; /* Slightly larger for readability */
+  color: #ffffff; /* Match with the overall text color */
+}
+
+.footer-dark ul {
+  padding: 0;
+  list-style: none;
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.footer-dark ul a {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.footer-dark ul a:hover {
+  opacity: 1;
+  text-decoration: underline; /* Highlight links on hover */
+}
+
+.footer-dark .item.text {
+  margin-bottom: 36px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.footer-dark .item.text p {
+  margin-bottom: 0;
+}
+
+.footer-dark .item.social {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-dark .item.social > a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #ffffff; /* Contrast circle background */
+  color: #282d32; /* Dark color for icons to match background */
+  margin: 0 8px;
+  transition: all 0.3s ease;
+}
+
+.footer-dark .item.social > a:hover {
+  color: #ffffff;
+  background-color: #007bff; /* Change to your brand's primary hover color */
+}
+
+.footer-dark .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-dark .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-dark .col-md-6 {
+  width: 50%;
+}
+
+.footer-dark .col-sm-6.col-md-3 {
+  width: 25%;
+}
+
+.footer-dark .item.text {
+  text-align: left;
+}
+
+.footer-dark .founder-info {
+  display: flex;
+  align-items: center;
+}
+
+.footer-dark .founder-info img {
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.footer-dark .founder-info div {
+  text-align: left;
+}
+
+.footer-dark .copyright {
+  text-align: center;
+  padding-top: 24px;
+  font-size: 13px;
+  margin-bottom: 0;
+  opacity: 0.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-dark .col-md-6 {
+      width: 100%;
+  }
+
+  .footer-dark .col-sm-6.col-md-3 {
+      width: 100%; /* Full width for better stacking on mobile */
+      margin-bottom: 20px;
+  }
+
+  .footer-dark .founder-info {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .footer-dark .founder-info img {
+      margin: 0 auto 10px;
+  }
+
+  .footer-dark .founder-info div {
+      margin-left: 0;
+      width: 100%;
+  }
+}
