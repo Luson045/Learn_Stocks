@@ -204,9 +204,9 @@ async function fetchAndUpdateStocks() {
   }
 }
 
-// Fetch data every 30 seconds
+// Fetch data every 2 minutes
 if (market==='Indian'){
-  cron.schedule('*/1 * * * *', fetchAndUpdateStocks);
+  cron.schedule('*/2 * * * *', fetchAndUpdateStocks);
 }
 cron.schedule('0 0 * * *', async () => { // Runs every day at midnight
   try {
