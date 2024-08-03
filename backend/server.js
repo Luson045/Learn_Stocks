@@ -6,6 +6,7 @@ const Orgroutes = require('./routes/orgs');
 const BSroutes = require('./routes/buynsell');
 const Stock = require('./models/org');
 const All = require('./models/all')
+const User = require('./models/User');
 const mongoose = require('mongoose');
 const cron = require('node-cron');
 const finnhub = require('finnhub');
@@ -26,7 +27,7 @@ app.use(express.static('public'))
 const PORT = process.env.PORT || 5000;
 //const AV_URL ='';
 const corsOptions = {
-  origin: ['https://learnstocks.netlify.app','https://console.cron-job.org/'], // Replace with your frontend's URL
+  origin: ['https://learnstocks.netlify.app','https://console.cron-job.org/','http://localhost:3000'], // Replace with your frontend's URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization', 'x-auth-token'],
   credentials: true,
@@ -204,9 +205,9 @@ async function fetchAndUpdateStocks() {
   }
 }
 
-// Fetch data every 2 minutes
+// Fetch data every 30 seconds
 if (market==='Indian'){
-  cron.schedule('*/2 * * * *', fetchAndUpdateStocks);
+  cron.schedule('*/1 * * * *', fetchAndUpdateStocks);
 }
 cron.schedule('0 0 * * *', async () => { // Runs every day at midnight
   try {
