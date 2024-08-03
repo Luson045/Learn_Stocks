@@ -11,6 +11,7 @@ import Demat from './components/Demat';
 import StockDisplay from './components/StockDisplay';
 import Portfolio from './components/Portfolio';
 import Features from './components/Features';
+import GuiPanal from './components/GUI2code';
 import Pricing from './components/Pricing';
 import TermsAndConditions from './components/TermsAndConditions';
 import { ToastContainer, toast } from 'react-toastify';
@@ -32,6 +33,7 @@ const App = () => {
                     <Route path="/terms" element={<TermsAndConditions/>} />
                     <Route path="/resources" element={<Features/>}/>
                     <Route path="/pricing" element={<Pricing/>}/>
+                    <Route path="/adminpanal" element={<GuiPanal/>}/>
                 </Routes>
                 <ToastContainer
                     position="top-right"

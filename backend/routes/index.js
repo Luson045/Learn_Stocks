@@ -5,6 +5,7 @@ const router = express.Router();
 const User = require('../models/User');
 const All = require('../models/all');
 const Rate = require('../models/Ratings');
+const Courses = require('../models/Courses');
 const nodemailer = require('nodemailer');
 const crypto = require('crypto');
 const path = require('path');
@@ -26,7 +27,44 @@ const auth = (req, res, next) => {
   }
 };
 // Sample GET routes
+router.get('/fetchCourses', async (req, res) => {
+    try {
+        // Fetch all courses and sort them by upload date in descending order
+        const courses = await Courses.find().sort({ uploadDate: -1 });
+        res.json(courses);
+    } catch (error) {
+        console.error('Error fetching courses:', error.message);
+        res.status(500).json({ msg: 'Server error' });
+    }
+});
+router.post('/courses', async (req, res) => {
+    const { title, content } = req.body;
+  
+    try {
+      const newCourse = new Courses({ title, content });
+      await newCourse.save();
+      res.status(201).json({ msg: 'Course saved successfully' });
+    } catch (error) {
+      console.error('Error saving course:', error.message);
+      res.status(500).json({ msg: 'Server error' });
+    }
+  });
+router.get('/course/:id', async (req, res) => {
+    try {
+        const courseId = req.params.id;
+        // Find the course by its ID
+        const course = await Courses.findById(courseId);
+        
+        if (!course) {
+            return res.status(404).json({ msg: 'Course not found' });
+        }
 
+        res.json(course);
+    } catch (error) {
+        console.error('Error fetching course:', error.message);
+        res.status(500).json({ msg: 'Server error' });
+    }
+});
 router.post('/rate', async(req,res)=>{
     try{
         const rating = new Rate({

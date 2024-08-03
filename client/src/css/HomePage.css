@@ -6,7 +6,11 @@
   text-align: center;
   padding: 2rem;
 }
-
+.caption{
+  z-index: 1111111;
+  bottom:0;
+  position: fixed;
+}
 /* Hero Section */
 .hero {
   padding: 2rem;

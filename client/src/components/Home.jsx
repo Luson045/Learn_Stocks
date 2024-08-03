@@ -174,6 +174,7 @@ const HomePage = () => {
             <Navbar />
             {usercount === 0 && (
                 <div className="video-overlay">
+                    <center><h2 className='caption'>/*DUE TO SOME MAJOR UPDATES OUR SERVICE IS CLOSED FOR A WHILE*/</h2></center>
                       <video autoplay muted loop id="bgVideo">
                         <source src="cover_back.mp4" type="video/mp4"/>
                         Your browser does not support the video tag.
