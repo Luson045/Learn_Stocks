@@ -7,16 +7,17 @@
   flex-direction: column;
   height: 100vh;
   ul{
+    align-items: center;
     list-style-type: none;
     padding-left: 0; 
     display: flex;
     gap: 50px;
-    flex-direction: column;
   }
   li:hover{
     cursor:pointer;
   }
   li{
+    max-width:90%;
     padding:10px;
     border-radius: 10px;
     background-color: white;
@@ -99,4 +100,10 @@
 
 .close-button:hover {
   background-color: #ff0000;
+}
+
+@media (max-width: 768px) {
+  ul{
+    flex-direction: column;
+  }
 }
