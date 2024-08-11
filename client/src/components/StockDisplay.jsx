@@ -213,6 +213,7 @@ const StockDisplay = () => {
     }, []);
     useEffect(() => {
         if (!localStorage.getItem('token')){
+            notify("Login to view stock prices","warn");
             navigate("/login");
         }
         const fetchSymbols = async () => {
