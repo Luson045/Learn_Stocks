@@ -8,9 +8,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import moment from 'moment-timezone';
 import getEnvironment from "../getenvironment";
- 
-// toast-configuration method,
-// it is compulsory method.
 import {
     LineChart,
     ResponsiveContainer,
@@ -38,31 +35,24 @@ const StockDisplay = () => {
 
     useEffect(() => {
       const checkMarketStatus = () => {
-        // Get current time in GMT
         const now = moment().tz('GMT');
-  
-        // Get current day of the week (0 = Sunday, 1 = Monday, ...)
         const currentDay = now.day();
-  
-        // Check if it's a weekday (Monday to Friday)
         if (currentDay >= 1 && currentDay <= 5) {
-          // Indian Market Time (IST: 09:15 AM to 03:30 PM)
-          // Convert to GMT: 03:45 AM to 10:00 AM GMT
+          //Indian Market Time=(09:15 AM to 03:30 PM)
           const indianMarketOpen = moment.tz('03:45', 'HH:mm', 'GMT');
           const indianMarketClose = moment.tz('10:00', 'HH:mm', 'GMT');
   
-          // American Market Time (EST: 09:30 AM to 04:00 PM)
-          // Convert to GMT: 14:30 PM to 21:00 PM GMT
+          //American Market Time=(EST:09:30 AM to 04:00 PM)
           const americanMarketOpen = moment.tz('14:30', 'HH:mm', 'GMT');
           const americanMarketClose = moment.tz('21:00', 'HH:mm', 'GMT');
   
-          // Check if current time is within Indian market hours
+          //checkin if current time is within Indian market hours
           if (now.isBetween(indianMarketOpen, indianMarketClose)) {
             setMarketStatus('');
             return;
           }
   
-          // Check if current time is within American market hours
+          //check forif current time is within American market hours
           if (now.isBetween(americanMarketOpen, americanMarketClose)) {
             setMarketStatus('Indian Market is closed right now!');
             return;
@@ -71,14 +61,8 @@ const StockDisplay = () => {
   
         setMarketStatus('Market is Currently Closed');
       };
-  
-      // Check status immediately
       checkMarketStatus();
-  
-      // Set up interval to check status every minute
       const intervalId = setInterval(checkMarketStatus, 60000);
-  
-      // Clean up interval on component unmount
       return () => clearInterval(intervalId);
     }, []);
     const dummy = [
@@ -158,7 +142,6 @@ const StockDisplay = () => {
         }
     };
     const fetchUser = async () =>{
-        // Assume token is stored in localStorage after login
         const token = localStorage.getItem('token');
         const loggedinuser = await fetch(`${apiUrl}/api/profile`,{
             method: 'GET',
@@ -217,7 +200,6 @@ const StockDisplay = () => {
             navigate("/login");
         }
         const fetchSymbols = async () => {
-            // Assume token is stored in localStorage after login
             const token = localStorage.getItem('token');
             const loggedinuser = await fetch(`${apiUrl}/api/profile`,{
                 method: 'GET',
